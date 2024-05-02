@@ -16,7 +16,7 @@ pianoAudio.set("e4", new Audio("Audio/E4.m4a"));
 // pianoAudio.set("b4", new Audio("Audio/b4.m4a"));
 // pianoAudio.set("c4", new Audio("Audio/c4.m4a"));
 
-pedal = false;
+let pedal = false;
 //need to make a key up function
 addEventListener("keydown", function(e){
     key = e.code;
@@ -49,7 +49,7 @@ addEventListener("keyup", function(e){
     switch(key){
         case "Space":
             pedal = false;
-            document.querySelectorAll('audio').forEach(el => el.pause());
+            pauseAll();
             break;
         case "KeyZ":
             setTimeout(pauseMusic(pianoAudio.get("c4"), pedal), 600);
@@ -85,10 +85,17 @@ function pauseMusic(audio, pedal)
 {
     if (audio!=null && pedal==false)
     {
-        //audio.playbackRate=5;
         audio.pause();
         audio.currentTime = 0;
     }
+}
+
+function pauseAll()
+{
+    pianoAudio.forEach((values, keys) => {
+        //if key is not pressed down
+        pauseMusic(values, pedal);
+    });
 }
 
 // const canvas = document.getElementById("canvas")

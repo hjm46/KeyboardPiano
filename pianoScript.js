@@ -1,4 +1,6 @@
-c = "Middle_C.m4a"
+//need to make some sort of enum for the file swhen shifting keys
+
+c = "Audio/Middle_C.m4a"
 addEventListener("keydown", function(e){
     key = e.code;
     let audio;

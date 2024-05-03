@@ -1,12 +1,12 @@
 //need to make some sort of enum for the file swhen shifting keys
-const pianoAudio = new Map();
+const pianoAudio = [];
 
 //C4
-pianoAudio.set("c4", new Audio("Audio/C4.m4a"));
-pianoAudio.set("d4flat", new Audio("Audio/D4_flat.m4a"));
-pianoAudio.set("d4", new Audio("Audio/D4.m4a"));
-pianoAudio.set("e4flat", new Audio("Audio/E4_flat.m4a"));
-pianoAudio.set("e4", new Audio("Audio/E4.m4a"));
+pianoAudio[40] = new Audio("Audio/C4.m4a");
+pianoAudio[41] = new Audio("Audio/D4_flat.m4a");
+pianoAudio[42] = new Audio("Audio/D4.m4a");
+pianoAudio[43] = new Audio("Audio/E4_flat.m4a");
+pianoAudio[44] = new Audio("Audio/E4.m4a");
 // pianoAudio.set("f4", new Audio("Audio/f4.m4a"));
 // pianoAudio.set("g4flat", new Audio("Audio/g4_flat.m4a"));
 // pianoAudio.set("g4", new Audio("Audio/g4.m4a"));
@@ -16,30 +16,34 @@ pianoAudio.set("e4", new Audio("Audio/E4.m4a"));
 // pianoAudio.set("b4", new Audio("Audio/b4.m4a"));
 // pianoAudio.set("c4", new Audio("Audio/c4.m4a"));
 
+const keyMap = new Map();
+keyMap.set("KeyZ", 40)
+keyMap.set("KeyS", 41)
+keyMap.set("KeyX", 42)
+keyMap.set("KeyD", 43)
+keyMap.set("KeyC", 44)
+
+
+const pressed = []
+leftStart = 40;
+rightStart = 60;
 let pedal = false;
 //need to make a key up function
 addEventListener("keydown", function(e){
     key = e.code;
+    repeat = e.repeat
     switch(key){
         case "Space":
+            if(repeat == true)
+                return;
             pedal = true;
             break;
-        case "KeyZ":
-            playMusic(pianoAudio.get("c4"), pedal);
-            break;
-        case "KeyS":
-            playMusic(pianoAudio.get("d4flat"), pedal);
-            break;
-        case "KeyX":
-            playMusic(pianoAudio.get("d4"), pedal);
-            break;
-        case "KeyD":
-            playMusic(pianoAudio.get("e4flat"), pedal);
-            break;
-        case "KeyC":
-            playMusic(pianoAudio.get("e4"), pedal);
-            break;
-        default: null
+
+        default: 
+            if(repeat == true)
+                return;
+            index = keyMap.get(key)
+            playMusic(pianoAudio[keyMap.get(key)], index);
 
     }
 });
@@ -51,52 +55,39 @@ addEventListener("keyup", function(e){
             pedal = false;
             pauseAll();
             break;
-        case "KeyZ":
-            setTimeout(pauseMusic(pianoAudio.get("c4"), pedal), 600);
-            break;
-        case "KeyS":
-            setTimeout(pauseMusic(pianoAudio.get("d4flat"), pedal), 600);
-            break;
-        case "KeyX":
-            setTimeout(pauseMusic(pianoAudio.get("d4"), pedal), 600);
-            break;
-        case "KeyD":
-            setTimeout(pauseMusic(pianoAudio.get("e4flat"), pedal), 600);
-            break;
-        case "KeyC":
-            setTimeout(pauseMusic(pianoAudio.get("e4"), pedal), 600);
-            break;
-        default: null
+
+        default:
+            index = keyMap.get(key)
+            setTimeout(pauseMusic(pianoAudio[index], pedal, index), 600);
 
     }
 });
 
-function playMusic(audio)
+function playMusic(audio, index)
 {
     if (audio!=null)
     {
-        //mess with this
-        //use the longest duration possible then cut off audio when key is up
+        audio.currentTime = 0;
         audio.play();
+        pressed[index] = true;
     }
 }
 
-function pauseMusic(audio, pedal)
+function pauseMusic(audio, pedal, index)
 {
     if (audio!=null && pedal==false)
     {
         audio.pause();
         audio.currentTime = 0;
+        pressed[index] = false;
     }
 }
 
 function pauseAll()
 {
-    pianoAudio.forEach((values, keys) => {
-        //if key is not pressed down
-        pauseMusic(values, pedal);
-    });
+    for(i=0; i<=44; i++) {
+        //work on this
+        //if(pressed[i]!=true)
+            pauseMusic(pianoAudio[i], pedal, index);
+    }
 }
-
-// const canvas = document.getElementById("canvas")
-// const ctx = canvas.getContext("2d")

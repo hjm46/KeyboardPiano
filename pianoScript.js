@@ -1,4 +1,13 @@
-//need to make some sort of enum for the file swhen shifting keys
+// array of audio files for each indivudual piano key
+
+// Since the number and order of keys on a standard piano is constant,
+// the length and order of the array is fixed. Therefore, it is fastest to insert and access
+// the elements directly.
+
+// The audio files are inserted in chromatic ascending order into the array,
+// and formated by octave. The files are loaded before inserting into the array to save time from loading
+// the file every time the key is pressed. If needed, the audio files can be easily updated here by changing the path name.
+
 const pianoAudio = [];
 
 //C3
@@ -74,6 +83,11 @@ pianoAudio[86] = new Audio("Audio/B7.m4a");
 //C8
 pianoAudio[87] = new Audio("Audio/C8.m4a");
 
+
+// Below is the default configuration of the mappings of the computer keyboard to piano key sounds.
+// This configuration is loaded in at the start of the program but can be changed while the program is running.
+// The map links the Javascript event codes to indecies of the pianoAudio array that correspond to the correct key.
+
 const keyMap = new Map();
 keyMap.set("KeyZ", 39)
 keyMap.set("KeyS", 40)
@@ -95,7 +109,13 @@ const pressed = []
 leftStart = 40;
 rightStart = 60;
 let pedal = false;
-//need to make a key up function
+
+// event.code is used here instead of event.key in order to preserve the positions of the key bindings on keyboard regardless
+// of the language the keyboard is in in order to minic a real piano as much as possible 
+// (for example, the layout of letters is different on a German keyboard verses an English QWERTY
+// keyboard however I want to preserve the layout of the keys and not necessarily the keys themselves. Since this was an opprotunity
+// to support mulitple keyboards, I took this approach.)
+
 addEventListener("keydown", function(e){
     key = e.code;
     repeat = e.repeat

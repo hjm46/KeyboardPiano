@@ -1,6 +1,20 @@
 //need to make some sort of enum for the file swhen shifting keys
 const pianoAudio = [];
 
+//C3
+pianoAudio[27] = new Audio("Audio/C3.m4a");
+pianoAudio[28] = new Audio("Audio/D3_flat.m4a");
+pianoAudio[29] = new Audio("Audio/D3.m4a");
+pianoAudio[30] = new Audio("Audio/E3_flat.m4a");
+pianoAudio[31] = new Audio("Audio/E3.m4a");
+pianoAudio[32] = new Audio("Audio/F3.m4a");
+pianoAudio[33] = new Audio("Audio/G3_flat.m4a");
+pianoAudio[34] = new Audio("Audio/G3.m4a");
+pianoAudio[35] = new Audio("Audio/A3_flat.m4a");
+pianoAudio[36] = new Audio("Audio/A3.m4a");
+pianoAudio[37] = new Audio("Audio/B3_flat.m4a");
+pianoAudio[38] = new Audio("Audio/B3.m4a");
+
 //C4
 pianoAudio[39] = new Audio("Audio/C4.m4a");
 pianoAudio[40] = new Audio("Audio/D4_flat.m4a");

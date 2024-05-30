@@ -89,21 +89,47 @@ pianoAudio[87] = new Audio("Audio/C8.m4a");
 // The map links the Javascript event codes to indecies of the pianoAudio array that correspond to the correct key.
 
 const keyMap = new Map();
-keyMap.set("KeyZ", 39)
-keyMap.set("KeyS", 40)
-keyMap.set("KeyX", 41)
-keyMap.set("KeyD", 42)
-keyMap.set("KeyC", 43)
-keyMap.set("KeyV", 44)
-keyMap.set("KeyG", 45)
-keyMap.set("KeyB", 46)
-keyMap.set("KeyH", 47)
-keyMap.set("KeyN", 48)
-keyMap.set("KeyJ", 49)
-keyMap.set("KeyM", 50)
-keyMap.set("Comma", 51)
+keyMap.set("KeyQ", 27);
+keyMap.set("Digit2", 28);
+keyMap.set("KeyW", 29);
+keyMap.set("Digit3", 30);
+keyMap.set("KeyE", 31);
+keyMap.set("KeyR", 32);
+keyMap.set("Digit5", 33);
+keyMap.set("KeyT", 34);
+keyMap.set("Digit6", 35);
+keyMap.set("KeyY", 36);
+keyMap.set("Digit7", 37);
+keyMap.set("KeyU", 38);
+keyMap.set("KeyI", 39);
 
+keyMap.set("KeyZ", 39);
+keyMap.set("KeyS", 40);
+keyMap.set("KeyX", 41);
+keyMap.set("KeyD", 42);
+keyMap.set("KeyC", 43);
+keyMap.set("KeyV", 44);
+keyMap.set("KeyG", 45);
+keyMap.set("KeyB", 46);
+keyMap.set("KeyH", 47);
+keyMap.set("KeyN", 48);
+keyMap.set("KeyJ", 49);
+keyMap.set("KeyM", 50);
+keyMap.set("Comma", 51);
 
+keyMap.set("Numpad0", 51);
+keyMap.set("Numpad1", 52);
+keyMap.set("Numpad2", 53);
+keyMap.set("Numpad3", 54);
+keyMap.set("Numpad4", 55);
+keyMap.set("Numpad5", 56);
+keyMap.set("Numpad6", 57);
+keyMap.set("Numpad7", 58);
+keyMap.set("Numpad8", 59);
+keyMap.set("Numpad9", 60);
+keyMap.set("NumLock", 61);
+keyMap.set("NumpadDivide", 62);
+keyMap.set("NumpadMultiply", 63);
 
 const pressed = []
 leftStart = 40;

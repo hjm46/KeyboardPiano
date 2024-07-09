@@ -6,15 +6,21 @@ body{
     background-attachment: fixed;
 }
 
-.whiteKey{
-    width: 25px;
-    height: 75px;
-    background: white;
-    border: 1px solid gray;
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
 }
 
-#A0 {position: absolute; left: 10px;}
-#B0 {position: relative; left: 40px;}
+.whiteKey{
+    width: 25px;
+    height: 80px;
+    background: white;
+    border: 1px solid gray;
+    text-align: center;
+    line-height: 130px;
+}
 
 
 .blackKey{
@@ -22,10 +28,4 @@ body{
     height: 50px;
     background: black;
     border: 1px solid gray;
-}
-
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }

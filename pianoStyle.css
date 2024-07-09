@@ -1,0 +1,31 @@
+body{
+    background: linear-gradient(rgb(117, 186, 251, 0) 0%, rgb(117, 186, 251, 1) 100%);
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.whiteKey{
+    width: 25px;
+    height: 75px;
+    background: white;
+    border: 1px solid gray;
+}
+
+#A0 {position: absolute; left: 10px;}
+#B0 {position: relative; left: 40px;}
+
+
+.blackKey{
+    width: 15px;
+    height: 50px;
+    background: black;
+    border: 1px solid gray;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

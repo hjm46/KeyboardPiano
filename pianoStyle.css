@@ -10,7 +10,13 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 500px;
+    height: 400px;
+}
+
+.upperContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .whiteKey{
@@ -22,10 +28,10 @@ body{
     line-height: 130px;
 }
 
-
 .blackKey{
     width: 15px;
     height: 50px;
     background: black;
     border: 1px solid gray;
+    line-height: 120px;
 }

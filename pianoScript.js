@@ -5,84 +5,116 @@
 // the elements directly.
 
 // The audio files are inserted in chromatic ascending order into the array,
-// and formated by octave. The files are loaded before inserting into the array to save time from loading
+// and formated by octave. The files are loaded at compile time into the array to save time from loading
 // the file every time the key is pressed. If needed, the audio files can be easily updated here by changing the path name.
 
-const pianoAudio = [];
+const pianoAudio = [
 
-//C3
-pianoAudio[27] = new Audio("Audio/C3.m4a");
-pianoAudio[28] = new Audio("Audio/D3_flat.m4a");
-pianoAudio[29] = new Audio("Audio/D3.m4a");
-pianoAudio[30] = new Audio("Audio/E3_flat.m4a");
-pianoAudio[31] = new Audio("Audio/E3.m4a");
-pianoAudio[32] = new Audio("Audio/F3.m4a");
-pianoAudio[33] = new Audio("Audio/G3_flat.m4a");
-pianoAudio[34] = new Audio("Audio/G3.m4a");
-pianoAudio[35] = new Audio("Audio/A3_flat.m4a");
-pianoAudio[36] = new Audio("Audio/A3.m4a");
-pianoAudio[37] = new Audio("Audio/B3_flat.m4a");
-pianoAudio[38] = new Audio("Audio/B3.m4a");
+    //C0
+    ["A0", null],
+    ["B0_flat", null],
+    ["B0", null],
 
-//C4
-pianoAudio[39] = new Audio("Audio/C4.m4a");
-pianoAudio[40] = new Audio("Audio/D4_flat.m4a");
-pianoAudio[41] = new Audio("Audio/D4.m4a");
-pianoAudio[42] = new Audio("Audio/E4_flat.m4a");
-pianoAudio[43] = new Audio("Audio/E4.m4a");
-pianoAudio[44] = new Audio("Audio/F4.m4a");
-pianoAudio[45] = new Audio("Audio/G4_flat.m4a");
-pianoAudio[46] = new Audio("Audio/G4.m4a");
-pianoAudio[47] = new Audio("Audio/A4_flat.m4a");
-pianoAudio[48] = new Audio("Audio/A4.m4a");
-pianoAudio[49] = new Audio("Audio/B4_flat.m4a");
-pianoAudio[50] = new Audio("Audio/B4.m4a");
+    //C1
+    ["C1", null],
+    ["D1_flat", null],
+    ["D1", null],
+    ["E1_flat", null],
+    ["E1", null],
+    ["F1", null],
+    ["G1_flat", null],
+    ["G1", null],
+    ["A1_flat", null],
+    ["A1", null],
+    ["B1_flat", null],
+    ["B1", null],
 
-//C5
-pianoAudio[51] = new Audio("Audio/C5.m4a");
-pianoAudio[52] = new Audio("Audio/D5_flat.m4a");
-pianoAudio[53] = new Audio("Audio/D5.m4a");
-pianoAudio[54] = new Audio("Audio/E5_flat.m4a");
-pianoAudio[55] = new Audio("Audio/E5.m4a");
-pianoAudio[56] = new Audio("Audio/F5.m4a");
-pianoAudio[57] = new Audio("Audio/G5_flat.m4a");
-pianoAudio[58] = new Audio("Audio/G5.m4a");
-pianoAudio[59] = new Audio("Audio/A5_flat.m4a");
-pianoAudio[60] = new Audio("Audio/A5.m4a");
-pianoAudio[61] = new Audio("Audio/B5_flat.m4a");
-pianoAudio[62] = new Audio("Audio/B5.m4a");
+    //C2
+    ["C2", null],
+    ["D2_flat", null],
+    ["D2", null],
+    ["E2_flat", null],
+    ["E2", null],
+    ["F2", null],
+    ["G2_flat", null],
+    ["G2", null],
+    ["A2_flat", null],
+    ["A2", null],
+    ["B2_flat", null],
+    ["B2", null],
 
-//C6
-pianoAudio[63] = new Audio("Audio/C6.m4a");
-pianoAudio[64] = new Audio("Audio/D6_flat.m4a");
-pianoAudio[65] = new Audio("Audio/D6.m4a");
-pianoAudio[66] = new Audio("Audio/E6_flat.m4a");
-pianoAudio[67] = new Audio("Audio/E6.m4a");
-pianoAudio[68] = new Audio("Audio/F6.m4a");
-pianoAudio[69] = new Audio("Audio/G6_flat.m4a");
-pianoAudio[70] = new Audio("Audio/G6.m4a");
-pianoAudio[71] = new Audio("Audio/A6_flat.m4a");
-pianoAudio[72] = new Audio("Audio/A6.m4a");
-pianoAudio[73] = new Audio("Audio/B6_flat.m4a");
-pianoAudio[74] = new Audio("Audio/B6.m4a");
+    //C3
+    ["C3", new Audio("Audio/C3.m4a")],
+    ["D3_flat", new Audio("Audio/D3_flat.m4a")],
+    ["D3", new Audio("Audio/D3.m4a")],
+    ["E3_flat", new Audio("Audio/E3_flat.m4a")],
+    ["E3", new Audio("Audio/E3.m4a")],
+    ["F3", new Audio("Audio/F3.m4a")],
+    ["G3_flat", new Audio("Audio/G3_flat.m4a")],
+    ["G3", new Audio("Audio/G3.m4a")],
+    ["A3_flat", new Audio("Audio/A3_flat.m4a")],
+    ["A3", new Audio("Audio/A3.m4a")],
+    ["B3_flat", new Audio("Audio/B3_flat.m4a")],
+    ["B3", new Audio("Audio/B3.m4a")],
 
-//C7
-pianoAudio[75] = new Audio("Audio/C7.m4a");
-pianoAudio[76] = new Audio("Audio/D7_flat.m4a");
-pianoAudio[77] = new Audio("Audio/D7.m4a");
-pianoAudio[78] = new Audio("Audio/E7_flat.m4a");
-pianoAudio[79] = new Audio("Audio/E7.m4a");
-pianoAudio[80] = new Audio("Audio/F7.m4a");
-pianoAudio[81] = new Audio("Audio/G7_flat.m4a");
-pianoAudio[82] = new Audio("Audio/G7.m4a");
-pianoAudio[83] = new Audio("Audio/A7_flat.m4a");
-pianoAudio[84] = new Audio("Audio/A7.m4a");
-pianoAudio[85] = new Audio("Audio/B7_flat.m4a");
-pianoAudio[86] = new Audio("Audio/B7.m4a");
+    //C4
+    ["C4", new Audio("Audio/C4.m4a")],
+    ["D4_flat", new Audio("Audio/D4_flat.m4a")],
+    ["D4", new Audio("Audio/D4.m4a")],
+    ["E4_flat", new Audio("Audio/E4_flat.m4a")],
+    ["E4", new Audio("Audio/E4.m4a")],
+    ["F4", new Audio("Audio/F4.m4a")],
+    ["G4_flat", new Audio("Audio/G4_flat.m4a")],
+    ["G4", new Audio("Audio/G4.m4a")],
+    ["A4_flat", new Audio("Audio/A4_flat.m4a")],
+    ["A4", new Audio("Audio/A4.m4a")],
+    ["B4_flat", new Audio("Audio/B4_flat.m4a")],
+    ["B4", new Audio("Audio/B4.m4a")],
 
-//C8
-pianoAudio[87] = new Audio("Audio/C8.m4a");
+    //C5
+    ["C5", new Audio("Audio/C5.m4a")],
+    ["D5_flat", new Audio("Audio/D5_flat.m4a")],
+    ["D5", new Audio("Audio/D5.m4a")],
+    ["E5_flat", new Audio("Audio/E5_flat.m4a")],
+    ["E5", new Audio("Audio/E5.m4a")],
+    ["F5", new Audio("Audio/F5.m4a")],
+    ["G5_flat", new Audio("Audio/G5_flat.m4a")],
+    ["G5", new Audio("Audio/G5.m4a")],
+    ["A5_flat", new Audio("Audio/A5_flat.m4a")],
+    ["A5", new Audio("Audio/A5.m4a")],
+    ["B5_flat", new Audio("Audio/B5_flat.m4a")],
+    ["B5", new Audio("Audio/B5.m4a")],
 
+    //C6
+    ["C6", new Audio("Audio/C6.m4a")],
+    ["D6_flat", new Audio("Audio/D6_flat.m4a")],
+    ["D6", new Audio("Audio/D6.m4a")],
+    ["E6_flat", new Audio("Audio/E6_flat.m4a")],
+    ["E6", new Audio("Audio/E6.m4a")],
+    ["F6", new Audio("Audio/F6.m4a")],
+    ["G6_flat", new Audio("Audio/G6_flat.m4a")],
+    ["G6", new Audio("Audio/G6.m4a")],
+    ["A6_flat", new Audio("Audio/A6_flat.m4a")],
+    ["A6", new Audio("Audio/A6.m4a")],
+    ["B6_flat", new Audio("Audio/B6_flat.m4a")],
+    ["B6", new Audio("Audio/B6.m4a")],
+
+    //C7
+    ["C7", new Audio("Audio/C7.m4a")],
+    ["D7_flat", new Audio("Audio/D7_flat.m4a")],
+    ["D7", new Audio("Audio/D7.m4a")],
+    ["E7_flat", new Audio("Audio/E7_flat.m4a")],
+    ["E7", new Audio("Audio/E7.m4a")],
+    ["F7", new Audio("Audio/F7.m4a")],
+    ["G7_flat", new Audio("Audio/G7_flat.m4a")],
+    ["G7", new Audio("Audio/G7.m4a")],
+    ["A7_flat", new Audio("Audio/A7_flat.m4a")],
+    ["A7", new Audio("Audio/A7.m4a")],
+    ["B7_flat", new Audio("Audio/B7_flat.m4a")],
+    ["B7", new Audio("Audio/B7.m4a")],
+
+    //C8
+    ["C8", new Audio("Audio/C8.m4a")]]
 
 // Below is the default configuration of the mappings of the computer keyboard to piano key sounds.
 // This configuration is loaded in at the start of the program but can be changed while the program is running.
@@ -156,7 +188,11 @@ addEventListener("keydown", function(e){
             if(repeat == true)
                 return;
             index = keyMap.get(key)
-            playMusic(pianoAudio[keyMap.get(key)], index);
+            if(index == null)
+                return;
+            playMusic(pianoAudio[index][1], index);
+            displayKey = document.getElementById(pianoAudio[index][0]);
+            displayKey.style.background = "#e1e1e1";
 
     }
 });
@@ -167,11 +203,22 @@ addEventListener("keyup", function(e){
         case "Space":
             pedal = false;
             pauseAll();
-            break;
 
         default:
             index = keyMap.get(key)
-            setTimeout(pauseMusic(pianoAudio[index], pedal, index), 600);
+            if(index == null)
+                return;
+            setTimeout(pauseMusic(pianoAudio[index][1], pedal, index), 100);
+            id = pianoAudio[index][0]
+            displayKey = document.getElementById(id);
+            
+            if(id.includes("_") == false)
+                displayKey.style.background = "white";
+
+            if(id.includes("_") == true)
+                displayKey.style.background = "black";
+
+            pressed[index] = false;
 
     }
 });
@@ -200,7 +247,7 @@ function pauseAll()
 {
     for(i=0; i<=44; i++) {
         //work on this
-        //if(pressed[i]!=true)
-            pauseMusic(pianoAudio[i], pedal, index);
+        if(pressed[i]==false)
+            pauseMusic(pianoAudio[i][1], pedal, i);
     }
 }

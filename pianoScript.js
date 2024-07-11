@@ -191,9 +191,14 @@ addEventListener("keydown", function(e){
             if(index == null)
                 return;
             playMusic(pianoAudio[index][1], index);
-            displayKey = document.getElementById(pianoAudio[index][0]);
-            displayKey.style.background = "#e1e1e1";
 
+            id = pianoAudio[index][0]
+            displayKey = document.getElementById(id);
+            if(id.includes("_") == false)
+                displayKey.style.background = "#e1e1e1";
+
+            if(id.includes("_") == true)
+                displayKey.style.background = "#949494 ";
     }
 });
 
@@ -208,10 +213,10 @@ addEventListener("keyup", function(e){
             index = keyMap.get(key)
             if(index == null)
                 return;
-            setTimeout(pauseMusic(pianoAudio[index][1], pedal, index), 100);
+            setTimeout(pauseMusic(pianoAudio[index][1], pedal, index), 10);
             id = pianoAudio[index][0]
             displayKey = document.getElementById(id);
-            
+
             if(id.includes("_") == false)
                 displayKey.style.background = "white";
 

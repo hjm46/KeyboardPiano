@@ -1,9 +1,17 @@
 body{
-    background: linear-gradient(rgb(117, 186, 251, 0) 0%, rgb(117, 186, 251, 1) 100%);
+    background: linear-gradient(rgb(117, 186, 251, 0) 0%, rgb(252, 255, 165) 100%);
     height: 100%;
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+
+.welcome{
+    font-size: 18px;
+    font-weight: bold;
+    width: 280px;
+    line-height: 24px;
+    margin-bottom: 5px;
 }
 
 .container{
@@ -11,7 +19,6 @@ body{
     align-items: center;
     justify-content: center;
     height: 400px;
-    left: 50;
 }
 
 .whiteKey{
@@ -21,6 +28,14 @@ body{
     border: 1px solid gray;
     text-align: center;
     line-height: 130px;
+}
+
+.upperContainer{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    width: 100%
 }
 
 .blackKey{
@@ -33,217 +48,181 @@ body{
 }
 
 #B0_flat{
-    position: absolute;
-    left: 95px;
-    top: 310px;
+    margin-right: 1330px;
+    top: 355px;
 }
 
 #D1_flat{
-    position: absolute;
-    left: 150px;
-    top: 310px;
+    margin-right: 1225px;
+    top: 355px;
 }
 
 #E1_flat{
-    position: absolute;
-    left: 175px;
-    top: 310px;
+    margin-right: 1175px;
+    top: 355px;
 }
 
 #G1_flat{
-    position: absolute;
-    left: 230px;
-    top: 310px;
+    margin-right: 1065px;
+    top: 355px;
 }
 
 #A1_flat{
-    position: absolute;
-    left: 255px;
-    top: 310px;
+    margin-right: 1015px;
+    top: 355px;
 }
 
 #B1_flat{
-    position: absolute;
-    left: 280px;
-    top: 310px;
+    margin-right: 965px;
+    top: 355px;
 }
 
 #D2_flat{
-    position: absolute;
-    left: 335px;
-    top: 310px;
+    margin-right: 855px;
+    top: 355px;
 }
 
 #E2_flat{
-    position: absolute;
-    left: 360px;
-    top: 310px;
+    margin-right: 800px;
+    top: 355px;
 }
 
 #G2_flat{
-    position: absolute;
-    left: 415px;
-    top: 310px;
+    margin-right: 695px;
+    top: 355px;
 }
 
 #A2_flat{
-    position: absolute;
-    left: 440px;
-    top: 310px;
+    margin-right: 640px;
+    top: 355px;
 }
 
 #B2_flat{
-    position: absolute;
-    left: 465px;
-    top: 310px;
+    margin-right: 585px;
+    top: 355px;
 }
 
 #D3_flat{
-    position: absolute;
-    left: 520px;
-    top: 310px;
+    margin-right: 480px;
+    top: 355px;
 }
 
 #E3_flat{
-    position: absolute;
-    left: 545px;
-    top: 310px;
+    margin-right: 425px;
+    top: 355px;
 }
 
 #G3_flat{
-    position: absolute;
-    left: 600px;
-    top: 310px;
+    margin-right: 320px;
+    top: 355px;
 }
 
 #A3_flat{
-    position: absolute;
-    left: 625px;
-    top: 310px;
+    margin-right: 265px;
+    top: 355px;
 }
 
 #B3_flat{
-    position: absolute;
-    left: 650px;
-    top: 310px;
+    margin-right: 215px;
+    top: 355px;
 }
 
 #D4_flat{
-    position: absolute;
-    left: 705px;
-    top: 310px;
+    margin-right: 105px;
+    top: 355px;
 }
 
 #E4_flat{
-    position: absolute;
-    left: 730px;
-    top: 310px;
+    margin-right: 55px;
+    top: 355px;
 }
 
 #G4_flat{
-    position: absolute;
-    left: 785px;
-    top: 310px;
+    margin-left: 50px;
+    top: 355px;
 }
 
 #A4_flat{
-    position: absolute;
-    left: 810px;
-    top: 310px;
+    margin-left: 105px;
+    top: 355px;
 }
 
 #B4_flat{
-    position: absolute;
-    left: 835px;
-    top: 310px;
+    margin-left: 155px;
+    top: 355px;
 }
 
 #D5_flat{
-    position: absolute;
-    left: 890px;
-    top: 310px;
+    margin-left: 265px;
+    top: 355px;
 }
 
 #E5_flat{
-    position: absolute;
-    left: 915px;
-    top: 310px;
+    margin-left: 320px;
+    top: 355px;
 }
 
 #G5_flat{
-    position: absolute;
-    left: 975px;
-    top: 310px;
+    margin-left: 425px;
+    top: 355px;
 }
 
 #A5_flat{
-    position: absolute;
-    left: 1000px;
-    top: 310px;
+    margin-left: 475px;
+    top: 355px;
 }
 
 #B5_flat{
-    position: absolute;
-    left: 1025px;
-    top: 310px;
+    margin-left: 530px;
+    top: 355px;
 }
 
 #D6_flat{
-    position: absolute;
-    left: 1080px;
-    top: 310px;
+    margin-left: 635px;
+    top: 355px;
 }
 
 #E6_flat{
-    position: absolute;
-    left: 1105px;
-    top: 310px;
+    margin-left: 690px;
+    top: 355px;
 }
 
 #G6_flat{
-    position: absolute;
-    left: 1160px;
-    top: 310px;
+    margin-left: 795px;
+    top: 355px;
 }
 
 #A6_flat{
-    position: absolute;
-    left: 1185px;
-    top: 310px;
+    margin-left: 850px;
+    top: 355px;
 }
 
 #B6_flat{
-    position: absolute;
-    left: 1210px;
-    top: 310px;
+    margin-left: 900px;
+    top: 355px;
 }
 
 #D7_flat{
-    position: absolute;
-    left: 1265px;
-    top: 310px;
+    margin-left: 1010px;
+    top: 355px;
 }
 
 #E7_flat{
-    position: absolute;
-    left: 1290px;
-    top: 310px;
+    margin-left: 1065px;
+    top: 355px;
 }
 
 #G7_flat{
-    position: absolute;
-    left: 1345px;
-    top: 310px;
+    margin-left: 1170px;
+    top: 355px;
 }
 
 #A7_flat{
-    position: absolute;
-    left: 1370px;
-    top: 310px;
+    margin-left: 1220px;
+    top: 355px;
 }
 
 #B7_flat{
-    position: absolute;
-    left: 1395px;
-    top: 310px;
+    margin-left: 1275px;
+    top: 355px;
 }

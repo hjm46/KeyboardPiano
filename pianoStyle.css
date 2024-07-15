@@ -11,6 +11,7 @@ body{
     align-items: center;
     justify-content: center;
     height: 400px;
+    left: 50;
 }
 
 .whiteKey{
@@ -28,6 +29,7 @@ body{
     background: black;
     border: 1px solid gray;
     line-height: 120px;
+    position: absolute;
 }
 
 #B0_flat{

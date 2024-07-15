@@ -11,37 +11,37 @@
 const pianoAudio = [
 
     //C0
-    ["A0", null],
-    ["B0_flat", null],
-    ["B0", null],
+    ["A0", new Audio("Audio/A0.m4a")],
+    ["B0_flat", new Audio("Audio/B0_flat.m4a")],
+    ["B0", new Audio("Audio/B0.m4a")],
 
     //C1
-    ["C1", null],
-    ["D1_flat", null],
-    ["D1", null],
-    ["E1_flat", null],
-    ["E1", null],
-    ["F1", null],
-    ["G1_flat", null],
-    ["G1", null],
-    ["A1_flat", null],
-    ["A1", null],
-    ["B1_flat", null],
-    ["B1", null],
+    ["C1", new Audio("Audio/C1.m4a")],
+    ["D1_flat", new Audio("Audio/D1_flat.m4a")],
+    ["D1", new Audio("Audio/D1.m4a")],
+    ["E1_flat", new Audio("Audio/E1_flat.m4a")],
+    ["E1", new Audio("Audio/E1.m4a")],
+    ["F1", new Audio("Audio/F1.m4a")],
+    ["G1_flat", new Audio("Audio/G1_flat.m4a")],
+    ["G1", new Audio("Audio/G1.m4a")],
+    ["A1_flat", new Audio("Audio/A1_flat.m4a")],
+    ["A1", new Audio("Audio/A1.m4a")],
+    ["B1_flat", new Audio("Audio/B1_flat.m4a")],
+    ["B1", new Audio("Audio/B1.m4a")],
 
     //C2
-    ["C2", null],
-    ["D2_flat", null],
-    ["D2", null],
-    ["E2_flat", null],
-    ["E2", null],
-    ["F2", null],
-    ["G2_flat", null],
-    ["G2", null],
-    ["A2_flat", null],
-    ["A2", null],
-    ["B2_flat", null],
-    ["B2", null],
+    ["C2", new Audio("Audio/C2.m4a")],
+    ["D2_flat", new Audio("Audio/D2_flat.m4a")],
+    ["D2", new Audio("Audio/D2.m4a")],
+    ["E2_flat", new Audio("Audio/E2_flat.m4a")],
+    ["E2", new Audio("Audio/E2.m4a")],
+    ["F2", new Audio("Audio/F2.m4a")],
+    ["G2_flat", new Audio("Audio/G2_flat.m4a")],
+    ["G2", new Audio("Audio/G2.m4a")],
+    ["A2_flat", new Audio("Audio/A2_flat.m4a")],
+    ["A2", new Audio("Audio/A2.m4a")],
+    ["B2_flat", new Audio("Audio/B2_flat.m4a")],
+    ["B2", new Audio("Audio/B2.m4a")],
 
     //C3
     ["C3", new Audio("Audio/C3.m4a")],
@@ -164,8 +164,6 @@ keyMap.set("NumpadDivide", 62);
 keyMap.set("NumpadMultiply", 63);
 
 const pressed = []
-leftStart = 40;
-rightStart = 60;
 let pedal = false;
 
 // event.code is used here instead of event.key in order to preserve the positions of the key bindings on keyboard regardless
@@ -176,13 +174,31 @@ let pedal = false;
 
 addEventListener("keydown", function(e){
     key = e.code;
-    repeat = e.repeat
+    repeat = e.repeat;
     switch(key){
         case "Space":
             if(repeat == true)
                 return;
             pedal = true;
             break;
+
+        case "ArrowUp":
+            if(keyMap.get("NumpadMultiply" >= 87))
+                return;
+            for([key, value] of keyMap)
+                {
+                    keyMap.set(key, value+12)
+                }
+            return;
+
+        case "ArrowDown":
+            if(keyMap.get("KeyQ") <= 0)
+                return;
+            for([key, value] of keyMap)
+                {
+                    keyMap.set(key, value-12)
+                }
+            return;
 
         default: 
             if(repeat == true)

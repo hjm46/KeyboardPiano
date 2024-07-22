@@ -208,6 +208,7 @@ addEventListener("keydown", function(e){
                 return;
             playMusic(pianoAudio[index][1], index);
 
+            // This causes the corresponding key on screen to change color
             id = pianoAudio[index][0]
             displayKey = document.getElementById(id);
             if(id.includes("_") == false)
@@ -233,6 +234,7 @@ addEventListener("keyup", function(e){
             id = pianoAudio[index][0]
             displayKey = document.getElementById(id);
 
+            // This causes the corresponding key on screen to change back to its original color
             if(id.includes("_") == false)
                 displayKey.style.background = "white";
 

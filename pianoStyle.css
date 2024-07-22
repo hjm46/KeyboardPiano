@@ -7,11 +7,25 @@ body{
 }
 
 .welcome{
-    font-size: 18px;
+    font-size: 25px;
     font-weight: bold;
-    width: 280px;
+    width: 300px;
     line-height: 24px;
     margin-bottom: 5px;
+    position: relative;
+    left: 600px;
+    top: 0px;
+}
+
+.directions{
+    font-size: 20px;
+    width: 600px;
+    line-height: 24px;
+    margin-bottom: 5px;
+    position: relative;
+    left: 450px;
+    top: 10px;
+    text-align: center;
 }
 
 .container{
@@ -19,6 +33,9 @@ body{
     align-items: center;
     justify-content: center;
     height: 400px;
+    position: absolute;
+    left: 75px;
+    top: 200px;
 }
 
 .whiteKey{
